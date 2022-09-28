@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         videoView = findViewById<VideoView>(R.id.video)
 
-        videoView?.let {
+        videoView.let {
             it.setVideoURI(Uri.parse("android.resource://$packageName/${R.raw.sample}"))
             it.start()
             it.addOnLayoutChangeListener { _, left, top, right, bottom,
